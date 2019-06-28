@@ -40,11 +40,11 @@
     type: table
     model: redshift_model
     explore: redshift_etl_errors
-    dimensions: [redshift_etl_errors.error_date, redshift_etl_errors.file_name, redshift_etl_errors.column_name,
+    dimensions: [redshift_etl_errors.error_time, redshift_etl_errors.file_name, redshift_etl_errors.column_name,
       redshift_etl_errors.column_data_type, redshift_etl_errors.error_reason]
     filters:
       redshift_etl_errors.error_date: 7 days
-    sorts: [redshift_etl_errors.error_date desc]
+    sorts: [redshift_etl_errors.error_time desc]
     show_view_names: true
     width: 12
     height: 4
